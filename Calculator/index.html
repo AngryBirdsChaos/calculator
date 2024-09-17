@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="calculator">
+        <input type="text" class="calculator-screen" id="screen" disabled />
+        <div class="calculator-keys">
+
+            <!--Special operators-->
+            <button class="key" onclick="squareNumber()">x²</button>            
+            <button class="key" onclick="squareRoot()">√x</button>      
+            <button class="key" onclick="appendToScreen('**')">^</button>
+            <button class="key" onclick="randomNo()">Rnd</button>
+
+            <!--Special operators-->
+            <button class="key" onclick="clearScreen()">C</button>
+            <button class="key" onclick="deleteLast()">DEL</button>
+            <button class="key" onclick="appendToScreen('%')">%</button>
+            <button class="key operator" onclick="appendToScreen('/')">/</button>
+
+            <button class="key" onclick="appendToScreen('7')">7</button>
+            <button class="key" onclick="appendToScreen('8')">8</button>
+            <button class="key" onclick="appendToScreen('9')">9</button>
+            <button class="key operator" onclick="appendToScreen('*')">*</button>
+
+            <button class="key" onclick="appendToScreen('4')">4</button>
+            <button class="key" onclick="appendToScreen('5')">5</button>
+            <button class="key" onclick="appendToScreen('6')">6</button>
+            <button class="key operator" onclick="appendToScreen('-')">-</button>
+
+            <button class="key" onclick="appendToScreen('1')">1</button>
+            <button class="key" onclick="appendToScreen('2')">2</button>
+            <button class="key" onclick="appendToScreen('3')">3</button>
+            <button class="key operator" onclick="appendToScreen('+')">+</button> 
+            
+            <!--Zero key is expanded to 2 columns for a classic calculator look-->
+            <button class="key zero" onclick="appendToScreen('0')">0</button>
+            <button class="key" onclick="appendToScreen('.')">.</button>
+            <button class="key" onclick="calculateResult()">=</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
